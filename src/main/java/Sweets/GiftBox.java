@@ -50,11 +50,12 @@ public class GiftBox implements GiftBoxInterface {
     }
 
     @Override
-    public void optimizeByCost(double maxCost) {
-        while (totalCost() > maxCost) {
-            sweets.sort((a, b) -> Double.compare(a.getPrice(), b.getPrice()));
-            sweets.remove(0); // удаляем наименее дорогую сладость
+    public void optimizeByCost(double targetWeight) {
+        while (totalWeight() > targetWeight) {
+            sweets.sort((a, b) -> Double.compare(a.getPrice(), b.getPrice())); // сортируем по возрастанию цены
+            sweets.remove(0); // удаляем самую дешевую сладость
         }
     }
+
 }
 

@@ -18,8 +18,7 @@ public class Main {
         System.out.println("Вес коробки: " + giftBox.totalWeight());
         System.out.println("Стоимость коробки: " + giftBox.totalCost());
         System.out.println("Все сладости:");
-        giftBox.displayAllSweets();
-
+        
         // Оптимизация коробки по весу
         giftBox.optimizeByWeight(0.6); // Ограничиваем максимальный вес до 0.6 кг
         System.out.println("\nИнформация после оптимизации по весу:");
@@ -27,7 +26,6 @@ public class Main {
         System.out.println("Новая стоимость коробки: " + giftBox.totalCost());
         System.out.println("Остались сладости:");
         giftBox.displayAllSweets();
-
         // Оптимизация коробки по стоимости
         giftBox.optimizeByCost(100); // Ограничиваем максимальную цену до 100 рублей
         System.out.println("\nИнформация после оптимизации по стоимости:");
@@ -35,6 +33,7 @@ public class Main {
         System.out.println("Новая стоимость коробки: " + giftBox.totalCost());
         System.out.println("Остались сладости:");
         giftBox.displayAllSweets();
+
     }
 }
 
