@@ -42,7 +42,7 @@ public class WordFrequencyCounter {
             }
         }
 
-        // Вывод статистики
+        // Вывод статистики/
         System.out.println("Список слов в алфавитном порядке:");
         wordCount.keySet().stream()
                 .sorted()
