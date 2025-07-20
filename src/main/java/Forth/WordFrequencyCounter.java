@@ -46,9 +46,9 @@ public class WordFrequencyCounter {
         System.out.println("Список слов в алфавитном порядке:");
         wordCount.keySet().stream()
                 .sorted()
-                .forEachOrdered(word -> System.out.printf("%s (%d)\\n", word, wordCount.get(word)));
+                .forEachOrdered(word -> System.out.printf("%s (%d)\n", word, wordCount.get(word)));
 
-        System.out.println("\\nСамые частые слова и их частота:");
+        System.out.println("\nСамые частые слова и их частота:");
         for (String word : mostFrequentWords) {
             System.out.printf("%s (%d)\n", word, maxFreq);
         }
