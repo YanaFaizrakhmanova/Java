@@ -20,6 +20,9 @@ public class WordFrequencyCount {
         String text = contentBuilder.toString().toLowerCase();
         List<String> words = Arrays.asList(text.split("[^a-zA-Z]+"));
 
+        // **Общее число слов**
+        int totalWordCount = words.size(); // Подсчет общего числа слов
+
         // Словарь для хранения частот слов
         Map<String, Integer> wordCounts = new HashMap<>();
         for (String word : words) {
@@ -53,7 +56,10 @@ public class WordFrequencyCount {
 
         System.out.println("\nСтатистика появления слов:");
         for (Map.Entry<String, Integer> entry : wordCounts.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+            // **Вычисление процента повторяемости слова**\
+            double percentage = (double) entry.getValue() / totalWordCount * 100;
+            // Форматированный вывод с округлением до двух десятичных знаков
+            System.out.printf("%s: %d (%.2f%%)%n", entry.getKey(), entry.getValue(), Math.round(percentage * 100.0) / 100.0);
         }
 
         System.out.println("\nСамые частые слова и их частота:");
